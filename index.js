@@ -1,44 +1,33 @@
- /*
- มี let const var 
+// // old function 
 
-> global
-> local -> block scope 
+// function sorwor(a,b){
+//     return a+b;
+// }
 
-
- var // แบบเก่า >> global  
-
- // ลองแล้วไหง ไม่เหมือน น่าจะ ที่ nodejs กะ browser ไม่เหมือนกัน 
- 
- */
+// // old function 
+// let result = sorwor(250,50);
+// console.log(result)
 
 
-//  var fruit  = "มะม่วง";
+// // new
+// multi line    
+// const sorwor=(a,b)=>{
+//     console.log("processing..")
+//     return a+b;
+// }
 
-//  if(fruit === 20){
-//     var fruit = "ส้มโอ";
-//     console.log(fruit);
-//  }
+// ถ้ามี return ก็แก้ให้เป็นงี้ สะดวกดี
+// single line 
+// const sorwor =(a,b) => a+b;
+// let result = sorwor(250,50);
+// 1 paramiter  => ไม่มีวงเล็บ
 
-//  console.log(fruit);
-
-
-
- // error เพราะว่า const เป็นค่าคงที่ เปลี่ยนไม่ได้ 
-//  const total = 100;
-//  total = 200;
-//  console.log("total = ",total);
-
+// return object 
 
 
-// เก็บเป็น object เปลี่ยนค่าได้
-const person = { 
-    name: "John",
-    last:"Nonphala"
+const student = (name) => ({name:name,age:10});
 
-};
-console.log("person = ",person);
-person.name  = "bancha";  
-console.log("person = ",person);
+let result = student("John")
 
 
-
+console.log(result)
